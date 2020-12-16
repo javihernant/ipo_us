@@ -1,0 +1,124 @@
+/**********************************************************************/
+/*  PROYECTO PIANO               */
+/*  EQUIPO MEINE                  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* outline: 1px solid red; */
+}
+
+/**********************************************************************/
+body {
+  background-color: whitesmoke;
+  height: 100vh;
+
+  /* Centra el contenido de la aplicacion */
+}
+
+/**********************************************************************/
+
+.lienzo {
+  background-color: lightgray;
+  width: 70%;
+  height: 60%;
+  display: grid;
+}
+
+/**********************************************************************/
+.cabecera {
+  background-color: black;
+}
+/**********************************************************************/
+
+.titulo-proyecto {
+  color: #fff;
+  text-align: center;
+}
+
+.equipo {
+  text-transform: uppercase;
+}
+
+/**********************************************************************/
+
+.osciladores {
+  background-color: black;
+}
+
+.osciladores::before {
+  content: "";
+}
+
+.osciladores::after {
+  content: "";
+}
+
+.oscilador {
+  background-color: lightgray;
+  border: none;
+}
+
+.oscilador--activo {
+  background-color: lightyellow;
+}
+
+.oscilador:focus {
+  outline: 1px solid black;
+}
+
+/**********************************************************************/
+.teclado {
+  background-color: darkslategrey;
+}
+
+/**********************************************************************/
+
+.tecla {
+  border: 1px solid black;
+}
+
+/**********************************************************************/
+.tecla--blanca {
+  background-color: white;
+}
+
+.tecla--blanca:hover {
+  background-color: whitesmoke;
+}
+
+/**********************************************************************/
+.tecla--negra {
+  background-color: black;
+  color: white;
+}
+
+.tecla--negra:hover {
+  background-color: darkgrey;
+}
+
+/**********************************************************************/
+
+.do-sostenido {
+  top: 0px;
+
+  /* left: calc(??????????) */
+}
+.re-sostenido {
+  top: 0px;
+  /* left: calc(??????????) */
+}
+.fa-sostenido {
+  top: 0px;
+  /* left: calc(??????????) */
+}
+.sol-sostenido {
+  top: 0px;
+  /* left: calc(??????????) */
+}
+.la-sostenido {
+  top: 0px;
+  /* left: calc(??????????) */
+}
