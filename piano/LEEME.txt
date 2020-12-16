@@ -1,0 +1,115 @@
+La actividad tiene como cometido completar un proyecto web inacabado.
+
+CONTENIDO:
+
+Se incluyen dos carpetas:
+
+  - Carpeta enunciado: Contiene este fichero (LEEME.TXT) y un video.
+    El video ilustra el resultado final deseado mientras que este
+    fichero enuncia las indicaciones exigidas para completar el proyecto.
+
+  - Carpeta del proyecto web inacabado. Incluye los ficheros de partida:
+                 index.html,  style.css,  script.js
+  
+ENTREGA:
+
+- La entrega de la actividad consiste en la carperta del proyecto
+  web completado SIN INCLUIR la carpeta enunciado.
+- La solución debe AÑADIR, NUNCA ALTERAR el contenido de CSS y JS
+    - style.css: se deben añadir declaraciones a las reglas (no se pueden modificar 
+           ni suprimir las declaraciones existente)
+    - script.js:  se deben implementar las funciones vacías. Para facilidad a la hora 
+       de reconocerlas, el nombre de la función comienza con tres subrayados bajo 
+                            ___nombreFuncion()
+       Las funcione a implementar incluyen un comentario aclaratorio de lo que realizan
+
+- Identificación del trabajo: 
+     2) script.js:  Se debe indicar el nombre del equipo de labotario en la variable 
+
+                 const nombreDelEquipoDeLaboratorio = "XXXXXX";
+
+     1) style.css: Se debe indicar el nombre del equipo de labotario en la cabecera 
+
+                /*  EQUIPO <<XXXXXXX>> */
+
+
+
+INDICACIONES:
+
+La actividad consiste en desarrollar una aplicación que simula un 
+piano con:
+    - 7 teclas blancas (do,re,mi,da,sol,la,si) y 
+    - 5 teclas negras  (do#, re#, fa#, sol#, la#) 
+
+NOTAS: 
+  - En nomenclatura musical se denomina sostenido al símbolo # 
+      (i.e. do# sería do sostenido) 
+  - La nomenclatura germánica de las notas se basa en letras:
+       (C=do D=re E=mi  F=fa G=sol A=la B=si)
+
+
+Interacciones:
+- El usuario puede pulsar una tecla del piano lo que emitirá durante
+  un segundo la nota asociada a la tecla. Al pulsar sobre la tecla
+  cambia temporalmente su color.
+- El usario puede escoger el tipo de sonido que se emitirá entre un 
+  conjunto de posibilidades. Los sonidos posibles se basan en los  
+  tipos de osciladores más frecuentes: sine, trinagle, square y sawtooh
+     (i. e. sinuoidal, triágulo, cuadrada y diente de sierra)
+
+NOTA: Un oscilador es un modelo de onda que es utilizado para
+generar sonido de forma artificial 
+
+El teclado se visualiza desde una perspectiva cenital (desde arriba) 
+de forma que  
+    - La altura de todas las 7 teclas blancas es igual a la altura del teclado
+    - Las alturas de las 5 teclas negras ocupan aproximadamente un 2/3 de la altura 
+      del teclado. 
+    - La anchura de las 7 teclas blancas es igual, cubriendo de forma 
+      equitativa toda la anchura del teclado. 
+    - La anchura de todas las 5 teclas negras es igual, pero su anchura es 
+      aproximadamente 2/3 de la anchura de una tecla blanca  
+
+Como es habitual en los teclados, las teclas negras se posicionan 
+entre dos teclas blancas.  
+       do#  entre  do y re 
+       re#  entre  re y mi 
+       fa#  entre  fa y sol
+       sol# entre sol y la
+       la#  entre  la y si
+       
+La tecla negra se posiciona de forma simétrica (i.e. la mitad de la anchura de 
+la tecla negra en cada una de las dos teclas blancas)
+
+
+Detalles técnicos sobre la implementación:
+
+* La composición de la interfaz debe combinar Grid y Flexbox.
+
+* El posicionamiento de las teclas negras se debe realizar con 
+  position. 
+
+* Las dimensiones del teclado son flexibles tanto horizontal como 
+  veticalmente. Para facilitar dicha flexibilidad se hará uso de 
+  medidas porcentuales y el uso de la función calc() 
+      https://developer.mozilla.org/en-US/docs/Web/CSS/calc()  
+
+* La decoración del panel de selección de osciladores se debe realizar
+  con pseudoelementos
+
+* Como alternativa a margin, se recomienda el uso preferente de la 
+  propiedad gap para separar los items tanto en contenedores 
+  Grid como FlexBox. (Nota)  
+
+* No incluir estilos ni medidas relacionadoa con tipografía 
+  (em, rem, font, font-size, font-weight)
+
+* La implementación en JS de la generación de sonido se realizara mediante 
+  la API Web Sound.
+    https://css-tricks.com/introduction-web-audio-api/
+    https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+
+
+
+  
+
