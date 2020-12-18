@@ -1,23 +1,21 @@
 /**********************************************************************/
 /*  PROYECTO PIANO               */
-/*  EQUIPO AMARILLO              */
+/*  EQUIPO MEINE                  */
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 
-  /* outline: 1px solid red;  */
+  /* outline: 1px solid red; */
 }
 
 /**********************************************************************/
 body {
   background-color: whitesmoke;
   height: 100vh;
+
   /* Centra el contenido de la aplicacion */
-  display: grid;
-  place-items: center;
-  
 }
 
 /**********************************************************************/
@@ -27,32 +25,17 @@ body {
   width: 70%;
   height: 60%;
   display: grid;
-  grid-template-columns: 20% auto;
-  grid-template-rows: 40px auto;
-  row-gap: 15px;
-  column-gap: 10px;
-  outline: 1px solid red;
-  align-items: center;
 }
 
 /**********************************************************************/
 .cabecera {
   background-color: black;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 /**********************************************************************/
 
 .titulo-proyecto {
   color: #fff;
   text-align: center;
-  margin: 10px;
 }
 
 .equipo {
@@ -63,21 +46,10 @@ body {
 
 .osciladores {
   background-color: black;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  height: 50%;
-  margin-left: 10px;
-    
 }
 
 .osciladores::before {
   content: "";
-
 }
 
 .osciladores::after {
@@ -87,9 +59,6 @@ body {
 .oscilador {
   background-color: lightgray;
   border: none;
-  margin-left: 15px;
-  margin-right: 15px;
-  border-radius: 10px;
 }
 
 .oscilador--activo {
@@ -103,36 +72,17 @@ body {
 /**********************************************************************/
 .teclado {
   background-color: darkslategrey;
-  
-  grid-column-start: 2;
-  grid-row-start: 2;
-  margin-right: 20px;
-  margin-left: 17px;
-  display: flex;
-  flex-direction: row;
-  height: 300px;
-  position: relative;
-  outline: 1px solid blue; 
 }
 
 /**********************************************************************/
 
 .tecla {
   border: 1px solid black;
-
-  width: 70%;  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  outline: 1px solid red;  
-  
 }
 
 /**********************************************************************/
 .tecla--blanca {
   background-color: white;
-  
 }
 
 .tecla--blanca:hover {
@@ -143,13 +93,6 @@ body {
 .tecla--negra {
   background-color: black;
   color: white;
-  position: absolute; 
- /* No se como hacer que aparezcan las teclas negras, si comentas absolute aparecen
- se que el padre es relative pero no se porque desaparecen el resto*/
-  right: 60px;  
-  height: 50%;
-  width: 8%;
-  z-index: 10;
 }
 
 .tecla--negra:hover {
