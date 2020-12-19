@@ -143,7 +143,7 @@ body {
 .tecla--negra {
   background-color: black;
   color: white;
-  position: absolute; 
+  position: absolute;
  /* No se como hacer que aparezcan las teclas negras, si comentas absolute aparecen
  se que el padre es relative pero no se porque desaparecen el resto*/
   right: 60px;  
@@ -160,22 +160,25 @@ body {
 
 .do-sostenido {
   top: 0px;
-
   /* left: calc(??????????) */
 }
 .re-sostenido {
   top: 0px;
+  left: 165px;
   /* left: calc(??????????) */
 }
 .fa-sostenido {
   top: 0px;
+  left: 355px;
   /* left: calc(??????????) */
 }
 .sol-sostenido {
   top: 0px;
+  left: 455px;
   /* left: calc(??????????) */
 }
 .la-sostenido {
   top: 0px;
+  left: 55px;
   /* left: calc(??????????) */
 }
