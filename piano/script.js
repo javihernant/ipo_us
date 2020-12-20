@@ -100,6 +100,20 @@ function ___generaSonido(frecuencia) {
   //     enviado directamente a la salida sin ningún tipo de procesamiento
   //   - El paso 4: se enviará el sonido a la salida, pero limitando la duración de emisión del sonido
   //     a un segundo. Será necesario el apoyo de .currenTime .play() y stop()
+  var context = new (window.AudioContext || window.webkitAudioContext)();
+
+  var oscillator = context.createOscillator();
+
+  oscillator.type = osciladorSeleccionado;
+  oscillator.frequency.value = frecuencia;
+
+  
+  oscillator.connect(context.destination);
+  var now = context.currentTime;
+  
+  oscillator.start();
+  oscillator.stop(now + 1);
+
 }
 
 // -----------------------------------------------
