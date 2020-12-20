@@ -2,6 +2,8 @@
 /*  PROYECTO PIANO               */
 /*  EQUIPO AMARILLO              */
 
+ 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,15 +26,17 @@ body {
 
 .lienzo {
   background-color: lightgray;
+
   width: 70%;
-  height: 60%;
+  height: 70%;
+
   display: grid;
-  grid-template-columns: 20% auto;
+  grid-template-columns: 22% auto;
   grid-template-rows: 40px auto;
-  row-gap: 15px;
-  column-gap: 10px;
-  outline: 1px solid red;
+  row-gap: 10px;
+  column-gap: 5px;
   align-items: center;
+  
 }
 
 /**********************************************************************/
@@ -41,11 +45,15 @@ body {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
-  margin-top: 10px;
+
+  margin-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  padding: 10px;
 }
 /**********************************************************************/
 
@@ -66,22 +74,48 @@ body {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: 2;
+  width:125px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  height: 50%;
-  margin-left: 10px;
-    
+  height: 190px;
+
+  margin-left: 15px;
+  margin-right: 5px;
+  
+  position:relative;
+  
+  
 }
 
 .osciladores::before {
   content: "";
-
+  border-top: 5px double white; 
+  border-left: 5px double  white;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  width: 60px;
+  padding-top: 20px;
+  
 }
 
 .osciladores::after {
   content: "";
+  
+  padding-bottom: 20px;
+  border-bottom: 5px double white;
+  border-right: 5px double white;
+  border-top: none;
+  border-left: none;
+  
+  position:absolute;
+  bottom:5px;
+  left: 55px;
+  width: 60px;
+  
 }
 
 .oscilador {
@@ -90,6 +124,9 @@ body {
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 10px;
+  padding: 4px;
+
+  
 }
 
 .oscilador--activo {
@@ -108,11 +145,12 @@ body {
   grid-row-start: 2;
   margin-right: 20px;
   margin-left: 17px;
+  
   display: flex;
   flex-direction: row;
-  height: 300px;
+  height: 90%;
   position: relative;
-  outline: 1px solid blue; 
+  
 }
 
 /**********************************************************************/
@@ -125,7 +163,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  outline: 1px solid red;  
+  
   
 }
 
@@ -144,8 +182,6 @@ body {
   background-color: black;
   color: white;
   position: absolute;
- /* No se como hacer que aparezcan las teclas negras, si comentas absolute aparecen
- se que el padre es relative pero no se porque desaparecen el resto*/
   right: 60px;  
   height: 50%;
   width: 8%;
@@ -160,25 +196,21 @@ body {
 
 .do-sostenido {
   top: 0px;
-  /* left: calc(??????????) */
+  left: calc(10%); 
 }
 .re-sostenido {
   top: 0px;
-  left: 165px;
-  /* left: calc(??????????) */
+  left: calc(25%);
 }
 .fa-sostenido {
   top: 0px;
-  left: 355px;
-  /* left: calc(??????????) */
+  left: calc(53.5%);
 }
 .sol-sostenido {
   top: 0px;
-  left: 455px;
-  /* left: calc(??????????) */
+  left: calc(67.5%);
 }
 .la-sostenido {
   top: 0px;
-  left: 55px;
-  /* left: calc(??????????) */
+  left: calc(82%);
 }
